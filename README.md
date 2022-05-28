@@ -1,3 +1,24 @@
+AÇIKLAMALAR
+Crontab Kullanımı için :
+
+env EDITOR=vim crontab -e komutu ile belirtilen backup saati secilmiştir. Sistem 23.05 de backup alır. 05 23 * * * 
+Mail içinde eğer disk kullanımı %90 ise her dakika kontrol edip mail atar. * * * * *
+
+mail ödevi için:
+usage = $(df -h --total | grep "/dev/sda1" | awk '{print $5}'| sed 's/[^0-9]*//g')
+
+df -h --total : diskin kapladığı yer
+grep "/dev/sda1 : disk 
+awk '{print$5}' : df -h --total komutunu böldük ve
+sed 's/[^0-9]*//g') : int değerini aldık, ve çıkan bu değeri
+mailtemplate.txt ye yazdırdık.
+
+md5sum ile hash kodu oluşturup ilişkilendirdik.
+
+
+
+
+
 # 1.Hafta-Odev-1-shell-scripting
 
 
